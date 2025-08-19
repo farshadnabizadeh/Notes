@@ -1,0 +1,19 @@
+1 . Don't explain me when I'm using 'note' keyword and only remember it and You must Explain me when I'm using 'problem' keyword and If i don't use 'note' keyword and 'problem' keyword , don't explain
+
+There are samples :
+
+note : don't explain
+don't explain
+problem : you must explain
+
+Is it clear ?
+
+
+
+2 . note : I'm using Following Tools 
+
+1. NextJs
+2. TailwindCSS
+3. TypeScript
+4.Redux-Toolkit
+5.material UI

@@ -2,10 +2,15 @@ How To Install Packages :
 
 npm install @reduxjs/toolkit react-redux
 npm install redux-persist
+npm install @types/redux-persist
 
 in the layout.tsx : 
 
 import { ReduxProvider } from "../lib/redux/provider";
+import { RootState } from '@/lib/redux/store'
+
+const count = useSelector((state: RootState) => state.counter.value)
+
 
 <html lang="en">
 	<body className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} antialiased`}>

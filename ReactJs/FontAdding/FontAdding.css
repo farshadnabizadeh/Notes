@@ -1,0 +1,17 @@
+body {
+  background: #ffffff !important;
+  color: var(--foreground);
+  font-family: "IranYekan","Tahoma", sans-serif !important;
+  font-feature-settings: "ss02";
+}
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("/fonts/IRANYekanX-Regular.woff2");
+}
+.numbers {
+  font-family: "IranYekan", "Tahoma", sans-serif !important; /* specify a secondary font that matches style */
+}
+.iranYekan {
+  font-family: "IranYekan", sans-serif;
+}

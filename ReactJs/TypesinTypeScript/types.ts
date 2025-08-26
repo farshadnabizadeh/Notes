@@ -93,3 +93,73 @@ const stepperSlice = createSlice({
 
 export const { updateStepStatus, resetStepper, setAllSteps } = stepperSlice.actions;
 export default stepperSlice.reducer;
+
+// =======================================================================================
+
+type CompanyField = {
+    value: string;
+    required: boolean;
+    done: boolean;
+};
+
+
+type Company = {
+    name: CompanyField;
+    type: CompanyField;
+    registerNo: CompanyField;
+    companyNo: CompanyField;
+    companyEconomyCode: CompanyField;
+    signatureOwner: CompanyField;
+    phoneNumber: CompanyField;
+    secondaryPhoneNumber: CompanyField;
+    email: CompanyField;
+};
+
+
+const Company = {
+    name: {
+        value: '',
+        required: true,
+        done: false
+    },
+    type: {
+        value: '',
+        required: false,
+        done: false,
+    },
+    registerNo: {
+        value: '',
+        required: true,
+        done: false,
+    },
+    companyNo: {
+        value: '',
+        required: true,
+        done: false,
+    },
+    companyEconomyCode: {
+        value: '',
+        required: false,
+        done: false,
+    },
+    signatureOwner: {
+        value: '',
+        required: false,
+        done: false,
+    },
+    phoneNumber: {
+        value: '',
+        required: true,
+        done: false,
+    },
+    secondaryPhoneNumber: {
+        value: '',
+        required: false,
+        done: false,
+    },
+    email: {
+        value: '',
+        required: false,
+        done: false,
+    }
+}

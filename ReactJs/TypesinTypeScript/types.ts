@@ -9,6 +9,7 @@ type PersonaCardProps = {
     className?: string;                 // wrapper class
     placement?: Placement;              // default: 'top'
     hintClassName?: string; 
+    e: React.ChangeEvent<HTMLInputElement>
 };
 
 

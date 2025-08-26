@@ -16,4 +16,6 @@ Is it clear ?
 2. TailwindCSS
 3. TypeScript
 4.Redux-Toolkit
-5.material UI
+
+
+note : use simple codes , to use simple code is important for me

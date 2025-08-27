@@ -1,6 +1,6 @@
-#include "mainwindow.h";
-#include"QApplication";
-#include"QPushButton";
+#include "mainwindow.h"
+#include"QApplication"
+#include"QPushButton"
 
 int main(int argc,char* argv[]){
 
@@ -11,6 +11,7 @@ int main(int argc,char* argv[]){
     button.show();
     QObject::connect(&button,&QPushButton::clicked,[&](){
        button.setText("Hey , I'm Here");
+       app.quit();
     });
     return app.exec();
 }

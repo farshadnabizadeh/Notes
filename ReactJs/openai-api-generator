@@ -1,0 +1,31 @@
+npx openapi-generator-cli generate -i ./api/account_api-docs.json -g typescript-axios  -o ./api/account/api-client
+
+try {
+    // Create a configured axios instance
+        const axiosInstance = axios.create({
+            baseURL: hostName,
+            headers: {
+                'Authorization': `Bearer ${data.access_token}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        // Create API instance with the configured axios instance
+        const walletApi = new WalletControllerApi(undefined, hostName, axiosInstance);
+
+        // Call the getCustomerWallet endpoint
+        const walletResponse = await walletApi.getCustomerWallet();
+        if (walletResponse.data) {
+            dispatch(setBaseWallet({
+                id: walletResponse.data.id,
+                amountRemain: walletResponse.data.amountRemain,
+                currencyTypeEn: walletResponse.data.currencyTypeEn,
+                tokenId: parseInt(id, 10)
+            }));
+            router.push('/dashboards/wallet/home');
+        }
+        } catch (walletError) {
+            console.error('Wallet data fetch error:', walletError);
+            router.push('/');
+        }
+}
